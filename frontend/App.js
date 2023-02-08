@@ -4,9 +4,11 @@ import axios from "axios";
 import Charts from "./components/Charts";
 import Navbar from "./components/Navbar";
 
+import useDarkmode from "./hooks/useDarkmode";
+
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useDarkmode(false);
 
   useEffect(() => {
     axios
